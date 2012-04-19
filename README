@@ -1,0 +1,45 @@
+1.
+Checked out repository from
+http://svn.apache.org/repos/asf/incubator/ambari/
+At revision: 1328081
+On Thu Apr 19, 2012.
+
+2.
+And added to git repo.
+
+*** Hence will not have all the history/log from the original svn repo.***
+
+3.
+My attempts failed in 'git svn clone', as follows:
+
+The following failed.
+C:\SreeV\ambari>git svn clone -s --no-metadata http://svn.apache.org/repos/asf/incubator/ambari C:\SreeV\ambari
+branch_from: /incubator/hms => /incubator/hms/trunk
+Found possible branch point: http://svn.apache.org/repos/asf/incubator/hms/trunk => http://svn.apache.org/repos/asf/incubator/ambari/trunk, 1165302
+Initializing parent: refs/remotes/trunk@1165302
+W: Ignoring error from SVN, path probably does not exist: (160013): Filesystem has no item: REPORT request failed on '/repos/asf/!svn/bc/996402': File not found: revision 996402, path '/incubator/hms/trunk'
+W: Do not be alarmed at the above message git-svn is just searching aggressively for old history.
+This may take a while on large repositories
+RA layer request failed: REPORT request failed on '/repos/asf/!svn/vcc/default': REPORT of '/repos/asf/!svn/vcc/default': 403 Forbidden (http://svn.apache.org) at C:\Program Files (x86)\Git/libexec/git-core\git-svn line 5669
+
+
+C:\SreeV\ambari>git svn clone --prefix=svn/ --stdlayout http://svn.apache.org/repos/asf/incubator/ambari
+Initialized empty Git repository in c:/SreeV/ambari/ambari/.git/
+Using higher level of URL: http://svn.apache.org/repos/asf/incubator/ambari => http://svn.apache.org/repos/asf
+W: Ignoring error from SVN, path probably does not exist: (160013): Filesystem has no item: REPORT request failed on '/repos/asf/!svn/bc/100': File not found: revision 100, path '/incubator/ambari'
+W: Do not be alarmed at the above message git-svn is just searching aggressively for old history.
+This may take a while on large repositories
+RA layer request failed: REPORT request failed on '/repos/asf/!svn/vcc/default': REPORT of '/repos/asf/!svn/vcc/default': 403 Forbidden (http://svn.apache.org) at C:\Program Files (x86)\Git/libexec/git-core\git-svn line 5669
+
+C:\SreeV\ambari>ls
+README
+
+C:\SreeV\ambari>ls -al
+total 6
+drwxr-xr-x    1 SreeVadd Administ        0 Apr 19 11:49 .
+drwxr-xr-x    1 SreeVadd Administ     8192 Apr 19 11:01 ..
+drwxr-xr-x   13 SreeVadd Administ     4096 Apr 19 11:07 .git
+
+
+4.
+Will sync with svn repo as often as possible.
